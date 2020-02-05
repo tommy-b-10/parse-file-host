@@ -2,36 +2,6 @@
     "version": 8,
     "name": "Raster Tiles",
     "sources": {
-        "qld-topo": {
-            "attribution" : "Australia QLD Topo Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://gisservices.information.qld.gov.au/arcgis/rest/services/Basemaps/QldMap_Topo/MapServer/tile/{z}/{y}/{x}"
-            ],
-            "tileSize": 256,
-            "maxZoom":23,
-            "minZoom":8
-        },
-        "nsw-topo": {
-            "attribution" : "Australia NSW Topo Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Topo_Map/MapServer/tile/{z}/{y}/{x}"
-            ],
-            "tileSize": 256,
-            "maxZoom":24,
-            "minZoom":6
-        },
-        "nsw-aerial": {
-            "attribution" : "Australia NSW Aerial Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer/tile/{z}/{y}/{x}"
-            ],
-            "tileSize": 256,
-            "maxZoom":26,
-            "minZoom":8
-        },
         "vic-topo": {
             "attribution" : "Australia VIC Topo Gov Maps",
             "type": "raster",
@@ -41,112 +11,9 @@
             "tileSize": 256,
             "maxZoom":26,
             "minZoom":8
-        },
-        "sa-topo": {
-            "attribution" : "Australia SA Topo Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://map.sarig.sa.gov.au/locationsa/BaseMaps/Topographic_wmas/MapServer/tile/{z}/{y}/{x}"
-            ],
-            "tileSize": 256,
-            "maxZoom":26,
-            "minZoom":8
-        },
-        "tas-topo": {
-            "attribution" : "Australia Tasmania Topo Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://services.thelist.tas.gov.au/arcgis/rest/services/Basemaps/TasmapRaster/MapServer/tile/{z}/{y}/{x}"
-            ],
-            "tileSize": 256,
-            "maxZoom":26,
-            "minZoom":8
-        },
-        "wa_nt-topo": {
-            "attribution" : "Australia WA and NT Topo Gov Maps",
-            "type": "raster",
-            "tiles": [
-                "https://d.tiles.mapbox.com/v4/mgregson.0l0nl42n/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWdyZWdzb24iLCJhIjoiY2lxaXJ3MW1qMDdra2ZubmViaDRiOXpoOSJ9.84NI0-WJgvcz74rvg7wClw"
-            ],
-            "tileSize": 256,
-            "maxZoom":26,
-            "minZoom":8
-        },
-        "google-road": {
-            "attribution" : "(c) 2015 Google - Map data",
-            "type": "raster",
-            "tiles": [
-                "https://mt0.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
-                "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
-                "https://mt2.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
-                "https://mt3.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
-            ],
-            "tileSize": 256,
-            "maxZoom":27,
-            "minZoom":0
-        },
-        "aut-srtm": {
-            "attribution": "Australia SRTM Topo DEM",
-            "type": "raster-dem",
-            "url": ""
         }
     },
     "layers": [
-        {
-            "id": "google-road",
-            "type": "raster",
-            "source": "google-road",
-            "paint": {
-                "raster-fade-duration": 100
-            },
-            "layout": {
-                "visibility":"visible"
-            }
-        },
-        {
-            "id": "sa-topo",
-            "type": "raster",
-            "source": "sa-topo",
-            "paint": {
-                "raster-fade-duration": 100
-            },
-            "layout": {
-                "visibility":"none"
-            }
-        },
-        {
-        "id": "qld-topo",
-        "type": "raster",
-        "source": "qld-topo",
-        "paint": {
-            "raster-fade-duration": 100
-        },
-        "layout": {
-            "visibility": "none"
-        }
-    },
-    {
-        "id": "nsw-topo",
-        "type": "raster",
-        "source": "nsw-topo",
-        "paint": {
-            "raster-fade-duration": 100
-        },
-        "layout": {
-            "visibility":"none"
-        }
-    },
-    {
-        "id": "nsw-aerial",
-        "type": "raster",
-        "source": "nsw-aerial",
-        "paint": {
-            "raster-fade-duration": 100
-        },
-        "layout": {
-            "visibility":"none"
-        }
-    },
     {
         "id": "vic-topo",
         "type": "raster",
@@ -156,28 +23,6 @@
         },
         "layout": {
             "visibility":"visible"
-        }
-    },
-    {
-        "id": "tas-topo",
-        "type": "raster",
-        "source": "tas-topo",
-        "paint": {
-            "raster-fade-duration": 100
-        },
-        "layout": {
-            "visibility":"none"
-        }
-    },
-    {
-        "id": "wa_nt-topo",
-        "type": "raster",
-        "source": "wa_nt-topo",
-        "paint": {
-            "raster-fade-duration": 100
-        },
-        "layout": {
-            "visibility":"none"
         }
     }
     ]
