@@ -2,22 +2,25 @@
     "version": 8,
     "name": "Raster Tiles",
     "sources": {
-        "vic-topo": {
-            "attribution" : "Australia VIC Topo Gov Maps",
+        "google-road": {
+            "attribution" : "(c) 2015 Google - Map data",
             "type": "raster",
             "tiles": [
-                "https://mapshare.maps.vic.gov.au/pwms/arcgis/rest/services/Basemaps/Mapscape_WebMercator/MapServer/tile/{z}/{y}/{x}"
+                "https://mt0.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+                "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+                "https://mt2.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+                "https://mt3.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
             ],
             "tileSize": 256,
-            "maxZoom":26,
-            "minZoom":8
+            "maxZoom":27,
+            "minZoom":0
         }
     },
     "layers": [
     {
-        "id": "vic-topo",
+        "id": "google-road",
         "type": "raster",
-        "source": "vic-topo",
+        "source": "google-road",
         "paint": {
             "raster-fade-duration": 100
         },
